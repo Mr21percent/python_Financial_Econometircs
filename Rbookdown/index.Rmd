@@ -2,11 +2,20 @@
 title: "index"
 author: "mr21percent"
 date: '2022-07-28'
-output: html_document
+output: 
+  html_document:
+    number_sections: false
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# 금융시게열분석
+# 시작에 앞서
+
+이거 읽으시는 분들
+
+**시계열 분석은 R이나 eviews로 하세요 .....제발**
+
+아직 제대로된 python 시계열 패키지가 존재하지 않는거 같습니다.
+굳이 직접 MLE 써가며 하실거 아닌 이상 R로 하시는게 좋아 보입니다.
