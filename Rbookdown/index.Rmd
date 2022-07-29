@@ -7,10 +7,6 @@ output:
     number_sections: false
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
 # 시작에 앞서
 
 이거 읽으시는 분들

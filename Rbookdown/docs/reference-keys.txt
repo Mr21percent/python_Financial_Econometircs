@@ -1,8 +1,7 @@
 시작에-앞서
-제4장-안정적-시게열모형의-추정과-예측
+안정적-시계열모형의-추정과-예측
 시작에-앞서-python을-사용하기-위한-설정
 일반적인-시계열-분석-과정의-이해
-기초-개념
 확률과정
 확률-변수-random-variable-또는-stochastic-variable
 확률-과정-stochastic-process
@@ -32,6 +31,7 @@ ar1-모형의-편자기상관함수partial-acf
 ar2-모형
 ar2모형의-자기상관함수acf
 ar2모형의-편자기상환상관함수partial-acf
+예제-ar2과정-시뮬레이션
 p-차-자기회귀모형arp-모형
 arp모형의-자기상관함수acf
 arp모형의-편자기상관함수pacf
@@ -53,13 +53,12 @@ ma2모형의-편자기상관함수pacf
 q-차-이동평균모형maq모형
 자기회귀---이동평균모형armapq-models
 arma11-과정
+arma11모형의-편자기상관함수pacf
+예제-arma11과정의-실현값
 armapq-모형
-armapq모형의-추정
-최우추정mle
-수치최적화
 적정-armapq모형-선정-절차---diagnostic-checking
+diy-예제-결과에서-확인해보기
 arma-모형의-예측
 arma-pq-모형의-예측의-기본원리
 예측오차
-armapq모형의-최소-mse-예측
-fractionally-integrated-arma-과정-farimapdq
+예제-원-달러-환율변화율의-예측
