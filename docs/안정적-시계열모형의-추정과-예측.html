@@ -303,12 +303,12 @@ F(t_1,t_2,\cdots,t_m) = F(t_1+n,t_2+n,\cdots,t_m+n)
 <span id="cb9-2"><a href="안정적-시계열모형의-추정과-예측.html#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
 <span id="cb9-3"><a href="안정적-시계열모형의-추정과-예측.html#cb9-3" aria-hidden="true" tabindex="-1"></a>kospi[<span class="st">&quot;Adj Close&quot;</span>].plot.line()</span>
 <span id="cb9-4"><a href="안정적-시계열모형의-추정과-예측.html#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="안정적-시계열모형의-추정과-예측.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 코스피 일간 수익률 그래프</span></span>
 <span id="cb10-2"><a href="안정적-시계열모형의-추정과-예측.html#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
 <span id="cb10-3"><a href="안정적-시계열모형의-추정과-예측.html#cb10-3" aria-hidden="true" tabindex="-1"></a>kospi[<span class="st">&quot;rtn&quot;</span>].plot.line()</span>
 <span id="cb10-4"><a href="안정적-시계열모형의-추정과-예측.html#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-5-3.png" width="672" /></p>
 <div id="acf-연산" class="section level5 hasAnchor" number="2.2.2.5.1">
 <h5><span class="header-section-number">2.2.2.5.1</span> ACF 연산<a href="안정적-시계열모형의-추정과-예측.html#acf-연산" class="anchor-section" aria-label="Anchor link to header"></a></h5>
 <p>nan을 제거하기 위해 첫번째 data를 제거하여야 합니다.</p>
@@ -323,7 +323,7 @@ F(t_1,t_2,\cdots,t_m) = F(t_1+n,t_2+n,\cdots,t_m+n)
 <span id="cb13-3"><a href="안정적-시계열모형의-추정과-예측.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># zero : 0차시 제거</span></span>
 <span id="cb13-4"><a href="안정적-시계열모형의-추정과-예측.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># auto_ylims : 자동으로 y축 축적 제공됨.</span></span>
 <span id="cb13-5"><a href="안정적-시계열모형의-추정과-예측.html#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-7-5.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-7-5.png" width="672" /></p>
 </div>
 <div id="pacf-연산" class="section level5 hasAnchor" number="2.2.2.5.2">
 <h5><span class="header-section-number">2.2.2.5.2</span> PACF 연산<a href="안정적-시계열모형의-추정과-예측.html#pacf-연산" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -338,7 +338,7 @@ F(t_1,t_2,\cdots,t_m) = F(t_1+n,t_2+n,\cdots,t_m+n)
 <span id="cb16-3"><a href="안정적-시계열모형의-추정과-예측.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># zero : 0차시 제거</span></span>
 <span id="cb16-4"><a href="안정적-시계열모형의-추정과-예측.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># auto_ylims : 자동으로 y축 축적 제공됨.</span></span>
 <span id="cb16-5"><a href="안정적-시계열모형의-추정과-예측.html#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-9-7.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-9-7.png" width="672" /></p>
 </div>
 <div id="box-test" class="section level5 hasAnchor" number="2.2.2.5.3">
 <h5><span class="header-section-number">2.2.2.5.3</span> Box test<a href="안정적-시계열모형의-추정과-예측.html#box-test" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -423,7 +423,7 @@ SE(\hat{\phi}_{kk}) \simeq 1/\sqrt{T}
 <span id="cb25-3"><a href="안정적-시계열모형의-추정과-예측.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="co"># zero : 0차시 제거</span></span>
 <span id="cb25-4"><a href="안정적-시계열모형의-추정과-예측.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="co"># auto_ylims : 자동으로 y축 축적 제공됨.</span></span>
 <span id="cb25-5"><a href="안정적-시계열모형의-추정과-예측.html#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-14-9.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-14-9.png" width="672" /></p>
 </div>
 <div id="pacf-연산-1" class="section level5 hasAnchor" number="2.2.3.1.2">
 <h5><span class="header-section-number">2.2.3.1.2</span> PACF 연산<a href="안정적-시계열모형의-추정과-예측.html#pacf-연산-1" class="anchor-section" aria-label="Anchor link to header"></a></h5>
@@ -438,7 +438,7 @@ SE(\hat{\phi}_{kk}) \simeq 1/\sqrt{T}
 <span id="cb28-3"><a href="안정적-시계열모형의-추정과-예측.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="co"># zero : 0차시 제거</span></span>
 <span id="cb28-4"><a href="안정적-시계열모형의-추정과-예측.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="co"># auto_ylims : 자동으로 y축 축적 제공됨.</span></span>
 <span id="cb28-5"><a href="안정적-시계열모형의-추정과-예측.html#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-16-11.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-16-11.png" width="672" /></p>
 </div>
 </div>
 </div>
@@ -612,7 +612,7 @@ SD(\hat{\rho}_k) \simeq \sqrt{(\frac{1}{T})(1+2\hat{\rho}^2_1+\cdots+2\hat{\rho}
 <span id="cb41-37"><a href="안정적-시계열모형의-추정과-예측.html#cb41-37" aria-hidden="true" tabindex="-1"></a>plot_pacf(AR1_30, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>,<span class="dv">1</span>],title <span class="op">=</span><span class="st">&#39;AR1_30 PACF&#39;</span> )</span>
 <span id="cb41-38"><a href="안정적-시계열모형의-추정과-예측.html#cb41-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb41-39"><a href="안정적-시계열모형의-추정과-예측.html#cb41-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-19-13.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-19-13.png" width="672" /></p>
 <p>두 계열의 표본 ACF를 보면, AR(1)과정임에도 불구하고 두 계열 모두 래그 2 이상에서도 자기상관을 가지고 있음을 확인할 수 있다(?).</p>
 <p>어떤 임의의 자료가 있을 때 이의 Sample ACF, Sample PACF가 위의 그림과 유사하다고 하자. 즉, 표본 ACF값이 상대적으로 부드럽게 감소하고(‘taper-off’), 표본 PACF 값은 래그 1 이후에도 0으로 갑자기 줄어드는 경우(‘cut-off after lag 1’)이다. 이 경우 우리는 임의의 자료가 AR(1)과정에서 생성된 것이라고 추측할 수 있으며, 이 자료를 AR(1)모형으로 표현하여 모형을 추정하게 되는 것이다.</p>
 </div>
@@ -707,7 +707,7 @@ E(x_t,x_{t-k}) = \phi_1E(x_{t-1}x_{t-k})+\phi_1E(x_{t-2}x_{t-k})+E(a_tx_{t-k})\\
 <span id="cb42-37"><a href="안정적-시계열모형의-추정과-예측.html#cb42-37" aria-hidden="true" tabindex="-1"></a>plot_pacf(AR2_2, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>,<span class="dv">1</span>],title <span class="op">=</span><span class="st">&#39;AR(2)_1 PACF&#39;</span> )</span>
 <span id="cb42-38"><a href="안정적-시계열모형의-추정과-예측.html#cb42-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-39"><a href="안정적-시계열모형의-추정과-예측.html#cb42-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-20-15.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-20-15.png" width="672" /></p>
 <p>두 시뮬레이션 모두 표본 PACF를 보면 래그 2 이후 모두 단절(cutt-off)되는 특성을 보이고 있다. 역으로 표본 PACF로 부터 AR(2)모형이 이 데이터들의 자료 생성 과정으로 적절한 후보임을 알 수도 있을 것이다.</p>
 <p>또한 표본 ACF를 보면 점차 감소(taper-off)하는 모형을 가지는데 긴 래그에서 집단적으로 작지만 음의 계수를 띄고 있는 것을 확인할 수 있다. 이러한 AR(2)과정의 움직임을 ‘준사이클’(pseudo-cycle)이라고 부르기도 한다.</p>
 </div>
@@ -868,7 +868,7 @@ x_t = a_t - \theta a_{t_1} \\
 <span id="cb45-37"><a href="안정적-시계열모형의-추정과-예측.html#cb45-37" aria-hidden="true" tabindex="-1"></a>plot_pacf(MA1_2, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>,<span class="dv">1</span>],title <span class="op">=</span><span class="st">&#39;MA1_2 PACF&#39;</span> )</span>
 <span id="cb45-38"><a href="안정적-시계열모형의-추정과-예측.html#cb45-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-39"><a href="안정적-시계열모형의-추정과-예측.html#cb45-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-22-17.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-22-17.png" width="672" /></p>
 <p>표본 ACF는 래그 1 이후 소멸함을 알 수 있다. 따라서 AR과정과 반대로 ACF의 cut-off 특성은 자료의 생성과정이 MA과정인지, 그리고 차수는 무엇인지에 대한 유용한 정보를 포함하고 있음을 알 수 있다.</p>
 </div>
 </div>
@@ -959,7 +959,7 @@ x_t = a_t - \theta_1 a_{t_1} - \theta_2 a_{t_2}\\
 <span id="cb46-37"><a href="안정적-시계열모형의-추정과-예측.html#cb46-37" aria-hidden="true" tabindex="-1"></a>plot_pacf(MA2_2, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>,<span class="dv">1</span>],title <span class="op">=</span><span class="st">&#39;MA2_2 PACF&#39;</span> )</span>
 <span id="cb46-38"><a href="안정적-시계열모형의-추정과-예측.html#cb46-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb46-39"><a href="안정적-시계열모형의-추정과-예측.html#cb46-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-23-19.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-23-19.png" width="672" /></p>
 <p>표본 ACF는 래그 2 이후 소멸함을 확인할 수 있다.반면에 표본 PACF는 점차적으로 감소하는 모양을 보이고 있다. 물론, 표본 ACF의 경우 고차의 래그에서도 영이 아닌 값이 있는 것처럼 보여 cut-off 특징이 잘 보이지 않을 수도 있으나 통계적 검정 또는 경험이 쌓이다 보면 이들이 비유의적이라는 것을 알게 될 것이다. 경험적으로 cut-off 특성은 ACF와 PACF를 동시에 보면서 상대적으로 판단하는 것이 유용할 때가 많다. 예를들면 PACF가 상대적으로 taper-off 특성을 가지고 있는 것을 쉽게 판단할 수 있을 것이다. 물론 실증분석에서는 적정 모형 설정 절차에 의하여 판단하는 것이 일반적이다.</p>
 </div>
 </div>
@@ -1074,7 +1074,7 @@ x_t = \phi_1 x_{t-1} + a_t - \theta_1 a_{t-1}
 <span id="cb47-37"><a href="안정적-시계열모형의-추정과-예측.html#cb47-37" aria-hidden="true" tabindex="-1"></a>plot_pacf(ARMA11_2, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>,<span class="dv">1</span>],title <span class="op">=</span><span class="st">&#39;ARMA(1,1) 2 PACF&#39;</span> )</span>
 <span id="cb47-38"><a href="안정적-시계열모형의-추정과-예측.html#cb47-38" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-39"><a href="안정적-시계열모형의-추정과-예측.html#cb47-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-24-21.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-24-21.png" width="672" /></p>
 </div>
 </div>
 <div id="armapq-모형" class="section level3 hasAnchor" number="2.6.2">
@@ -1264,7 +1264,7 @@ Cov[e_T(1)e_T(2)] = \psi_1 \sigma^2_a \ne 0
 <span id="cb72-10"><a href="안정적-시계열모형의-추정과-예측.html#cb72-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;WD_Return(%)&#39;</span>)</span>
 <span id="cb72-11"><a href="안정적-시계열모형의-추정과-예측.html#cb72-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb72-12"><a href="안정적-시계열모형의-추정과-예측.html#cb72-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-28-23.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-28-23.png" width="672" /></p>
 <p>여기서는 환율 자체를 안정시계열로 가정하고 분석을 진행하겠습니다.</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="안정적-시계열모형의-추정과-예측.html#cb73-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
 <span id="cb73-2"><a href="안정적-시계열모형의-추정과-예측.html#cb73-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -1276,7 +1276,7 @@ Cov[e_T(1)e_T(2)] = \psi_1 \sigma^2_a \ne 0
 <span id="cb73-8"><a href="안정적-시계열모형의-추정과-예측.html#cb73-8" aria-hidden="true" tabindex="-1"></a><span class="co"># pacf</span></span>
 <span id="cb73-9"><a href="안정적-시계열모형의-추정과-예측.html#cb73-9" aria-hidden="true" tabindex="-1"></a>plot_pacf(wd[<span class="st">&quot;Adj Close&quot;</span>], lags<span class="op">=</span><span class="dv">10</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>],  title <span class="op">=</span><span class="st">&#39;WD PACF&#39;</span>)</span>
 <span id="cb73-10"><a href="안정적-시계열모형의-추정과-예측.html#cb73-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-29-25.png" width="672" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-29-25.png" width="672" /></p>
 <p>전형적인 AR(1)의 ACF, PACF그림을 보여주고 있습니다. PACF가 래그 1 이후 cut-off하고 ACF는 지수적으로 감소하는 특성을 보이고 있습니다. 여기서는 ARMA(1,1) 모형을 활용하겠습니다.</p>
 <div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="안정적-시계열모형의-추정과-예측.html#cb74-1" aria-hidden="true" tabindex="-1"></a>res_WD_arma11 <span class="op">=</span> sm.tsa.arima.ARIMA(wd[<span class="st">&quot;Adj Close&quot;</span>], order<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>), ).fit() </span>
 <span id="cb74-2"><a href="안정적-시계열모형의-추정과-예측.html#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res_WD_arma11.summary())</span></code></pre></div>
@@ -1389,7 +1389,7 @@ Cov[e_T(1)e_T(2)] = \psi_1 \sigma^2_a \ne 0
 <span id="cb97-26"><a href="안정적-시계열모형의-추정과-예측.html#cb97-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 년도 데이터 전체 표출</span></span>
 <span id="cb97-27"><a href="안정적-시계열모형의-추정과-예측.html#cb97-27" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>).index)<span class="op">;</span></span>
 <span id="cb97-28"><a href="안정적-시계열모형의-추정과-예측.html#cb97-28" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-32-27.png" width="1440" /></p>
+<p><img src="main-files/figure-html/unnamed-chunk-32-27.png" width="1440" /></p>
 
 </div>
 </div>
