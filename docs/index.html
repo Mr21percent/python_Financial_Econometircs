@@ -178,6 +178,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.9.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#예제-원-달러-환율변화율의-예측"><i class="fa fa-check"></i><b>2.9.3</b> 예제) 원-달러 환율변화율의 예측</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="3" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html"><i class="fa fa-check"></i><b>3</b> 불안정적 시계열모형의 추정과 예측</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#시작에-앞서-python을-사용하기-위한-설정-1"><i class="fa fa-check"></i><b>3.1</b> 시작에 앞서 python을 사용하기 위한 설정</a></li>
+<li class="chapter" data-level="3.2" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열모형"><i class="fa fa-check"></i><b>3.2</b> 불안정시계열모형</a></li>
+<li class="chapter" data-level="3.3" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#확률보행모형"><i class="fa fa-check"></i><b>3.3</b> 확률보행모형</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#예제-확률보행과정-sample-acf와-sample-pacf"><i class="fa fa-check"></i><b>3.3.1</b> 예제) 확률보행과정 Sample ACF와 Sample PACF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#integrated-moving-averageima모형"><i class="fa fa-check"></i><b>3.4</b> Integrated Moving-Average(IMA)모형</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#ima11과정의-sample-acf와-sample-pacf"><i class="fa fa-check"></i><b>3.4.1</b> IMA(1,1)과정의 Sample ACF와 Sample PACF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#arimapdq과정"><i class="fa fa-check"></i><b>3.5</b> ARIMA(p,d,q)과정</a></li>
+<li class="chapter" data-level="3.6" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#베버리지-넬슨-분해"><i class="fa fa-check"></i><b>3.6</b> 베버리지-넬슨 분해</a></li>
+<li class="chapter" data-level="3.7" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#hodric-prescott-필터"><i class="fa fa-check"></i><b>3.7</b> Hodric-Prescott 필터</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#예제hp-필터-분해"><i class="fa fa-check"></i><b>3.7.1</b> 예제)HP 필터 분해</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열의-예측"><i class="fa fa-check"></i><b>3.8</b> 불안정시계열의 예측</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#arimapdq모형의-mmse-예측"><i class="fa fa-check"></i><b>3.8.1</b> ARIMA(p,d,q)모형의 MMSE 예측</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#python을을-이용한-예측-예제"><i class="fa fa-check"></i><b>3.9</b> Python을을 이용한 예측 예제</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -207,8 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">1</span> 시작에 앞서<a href="index.html#시작에-앞서" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>이거 읽으시는 분들</p>
 <p><strong>시계열 분석은 R이나 eviews로 하세요 …..제발</strong></p>
-<p>아직 제대로된 python 시계열 패키지가 존재하지 않는거 같습니다.
-굳이 직접 MLE 써가며 하실거 아닌 이상 R로 하시는게 좋아 보입니다.</p>
+<p>아직 제대로된 python 시계열 패키지가 존재하지 않는거 같습니다. statsmodels에서는 ARCH GARCH의 경우 지원하지 않고 있습니다. 대부분 관심도가 높은 상태공간모형, VAR에 집중하고 있다고 합니다. 후에, 파이썬으로 해당 내용들을 전부 정리를 마치고 난 뒤에 R 코드를 추가할 계획은 있습니다만, python만 해도 너무 양이 방대해 언제 될지는 모릅니다.</p>
 
 </div>
             </section>

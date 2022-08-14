@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3 불안정적 시계열모형의 추정과 예측 | index</title>
+  <meta name="description" content="3 불안정적 시계열모형의 추정과 예측 | index" />
+  <meta name="generator" content="bookdown 0.27 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3 불안정적 시계열모형의 추정과 예측 | index" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3 불안정적 시계열모형의 추정과 예측 | index" />
+  
+  
+  
+
+<meta name="author" content="mr21percent" />
+
+
+<meta name="date" content="2022-07-28" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="안정적-시계열모형의-추정과-예측.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">파이썬을 활용한 금융시계열분석</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> 시작에 앞서</a></li>
+<li class="chapter" data-level="2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html"><i class="fa fa-check"></i><b>2</b> 안정적 시계열모형의 추정과 예측</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#시작에-앞서-python을-사용하기-위한-설정"><i class="fa fa-check"></i><b>2.1</b> 시작에 앞서 python을 사용하기 위한 설정</a></li>
+<li class="chapter" data-level="2.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#일반적인-시계열-분석-과정의-이해"><i class="fa fa-check"></i><b>2.2</b> 일반적인 시계열 분석 과정의 이해</a></li>
+<li class="chapter" data-level="2.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#기초-개념"><i class="fa fa-check"></i><b>2.3</b> 기초 개념</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#확률과정"><i class="fa fa-check"></i><b>2.3.1</b> 확률과정</a></li>
+<li class="chapter" data-level="2.3.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#안정성-자기공분산-및-자기-상관"><i class="fa fa-check"></i><b>2.3.2</b> 안정성, 자기공분산 및 자기 상관</a></li>
+<li class="chapter" data-level="2.3.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#편자기상관"><i class="fa fa-check"></i><b>2.3.3</b> 편자기상관</a></li>
+<li class="chapter" data-level="2.3.4" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#월드분해정리와-선형필터"><i class="fa fa-check"></i><b>2.3.4</b> 월드분해정리와 선형필터</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#자기회귀모형"><i class="fa fa-check"></i><b>2.4</b> 자기회귀모형</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#예시-안정성-조건-확인"><i class="fa fa-check"></i><b>2.4.1</b> 예시 (안정성 조건 확인)</a></li>
+<li class="chapter" data-level="2.4.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#ar1-모형"><i class="fa fa-check"></i><b>2.4.2</b> AR(1) 모형</a></li>
+<li class="chapter" data-level="2.4.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#ar2-모형"><i class="fa fa-check"></i><b>2.4.3</b> AR(2) 모형</a></li>
+<li class="chapter" data-level="2.4.4" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#p-차-자기회귀모형arp-모형"><i class="fa fa-check"></i><b>2.4.4</b> p-차 자기회귀모형(AR(p) 모형)</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#이동평균-모형"><i class="fa fa-check"></i><b>2.5</b> 이동평균 모형</a>
+<ul>
+<li class="chapter" data-level="2.5.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#가역성-조건"><i class="fa fa-check"></i><b>2.5.1</b> 가역성 조건</a></li>
+<li class="chapter" data-level="2.5.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#ma1-모형"><i class="fa fa-check"></i><b>2.5.2</b> MA(1) 모형</a></li>
+<li class="chapter" data-level="2.5.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#ma2-모형"><i class="fa fa-check"></i><b>2.5.3</b> MA(2) 모형</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#q-차-이동평균모형maq모형"><i class="fa fa-check"></i><b>2.6</b> q-차 이동평균모형(MA(q)모형)</a></li>
+<li class="chapter" data-level="2.7" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#자기회귀---이동평균모형armapq-models"><i class="fa fa-check"></i><b>2.7</b> 자기회귀 - 이동평균모형(ARMA(p,q) models)</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#arma11-과정"><i class="fa fa-check"></i><b>2.7.1</b> ARMA(1,1) 과정</a></li>
+<li class="chapter" data-level="2.7.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#armapq-모형"><i class="fa fa-check"></i><b>2.7.2</b> ARMA(p,q) 모형</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#적정-armapq모형-선정-절차---diagnostic-checking"><i class="fa fa-check"></i><b>2.8</b> 적정 ARMA(p,q)모형 선정 절차 - Diagnostic Checking</a>
+<ul>
+<li class="chapter" data-level="2.8.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#diy-예제-결과에서-확인해보기"><i class="fa fa-check"></i><b>2.8.1</b> diy 예제) 결과에서 확인해보기</a></li>
+</ul></li>
+<li class="chapter" data-level="2.9" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#arma-모형의-예측"><i class="fa fa-check"></i><b>2.9</b> ARMA 모형의 예측</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#arma-pq-모형의-예측의-기본원리"><i class="fa fa-check"></i><b>2.9.1</b> ARMA (p,q) 모형의 예측의 기본원리</a></li>
+<li class="chapter" data-level="2.9.2" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#예측오차"><i class="fa fa-check"></i><b>2.9.2</b> 예측오차</a></li>
+<li class="chapter" data-level="2.9.3" data-path="안정적-시계열모형의-추정과-예측.html"><a href="안정적-시계열모형의-추정과-예측.html#예제-원-달러-환율변화율의-예측"><i class="fa fa-check"></i><b>2.9.3</b> 예제) 원-달러 환율변화율의 예측</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html"><i class="fa fa-check"></i><b>3</b> 불안정적 시계열모형의 추정과 예측</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#시작에-앞서-python을-사용하기-위한-설정-1"><i class="fa fa-check"></i><b>3.1</b> 시작에 앞서 python을 사용하기 위한 설정</a></li>
+<li class="chapter" data-level="3.2" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열모형"><i class="fa fa-check"></i><b>3.2</b> 불안정시계열모형</a></li>
+<li class="chapter" data-level="3.3" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#확률보행모형"><i class="fa fa-check"></i><b>3.3</b> 확률보행모형</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#예제-확률보행과정-sample-acf와-sample-pacf"><i class="fa fa-check"></i><b>3.3.1</b> 예제) 확률보행과정 Sample ACF와 Sample PACF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#integrated-moving-averageima모형"><i class="fa fa-check"></i><b>3.4</b> Integrated Moving-Average(IMA)모형</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#ima11과정의-sample-acf와-sample-pacf"><i class="fa fa-check"></i><b>3.4.1</b> IMA(1,1)과정의 Sample ACF와 Sample PACF</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#arimapdq과정"><i class="fa fa-check"></i><b>3.5</b> ARIMA(p,d,q)과정</a></li>
+<li class="chapter" data-level="3.6" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#베버리지-넬슨-분해"><i class="fa fa-check"></i><b>3.6</b> 베버리지-넬슨 분해</a></li>
+<li class="chapter" data-level="3.7" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#hodric-prescott-필터"><i class="fa fa-check"></i><b>3.7</b> Hodric-Prescott 필터</a>
+<ul>
+<li class="chapter" data-level="3.7.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#예제hp-필터-분해"><i class="fa fa-check"></i><b>3.7.1</b> 예제)HP 필터 분해</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열의-예측"><i class="fa fa-check"></i><b>3.8</b> 불안정시계열의 예측</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#arimapdq모형의-mmse-예측"><i class="fa fa-check"></i><b>3.8.1</b> ARIMA(p,d,q)모형의 MMSE 예측</a></li>
+</ul></li>
+<li class="chapter" data-level="3.9" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#python을을-이용한-예측-예제"><i class="fa fa-check"></i><b>3.9</b> Python을을 이용한 예측 예제</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">index</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="불안정적-시계열모형의-추정과-예측" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> 불안정적 시계열모형의 추정과 예측<a href="불안정적-시계열모형의-추정과-예측.html#불안정적-시계열모형의-추정과-예측" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="시작에-앞서-python을-사용하기-위한-설정-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> 시작에 앞서 python을 사용하기 위한 설정<a href="불안정적-시계열모형의-추정과-예측.html#시작에-앞서-python을-사용하기-위한-설정-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>다음은 python을 불러오기 위한 것입니다. 본인의 파이썬 경로를 넣으실 수도 있겠지만, 편의를 위하여 포함되어 있는 파일을 사용하시길 추천드립니다.</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb98-1" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>opts_chunk<span class="sc">$</span><span class="fu">set</span>(<span class="at">echo =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb98-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb98-2" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span>knit_engines<span class="sc">$</span><span class="fu">set</span>(<span class="at">python =</span> reticulate<span class="sc">::</span>eng_python)</span>
+<span id="cb98-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb98-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">&quot;reticulate&quot;</span>)</span>
+<span id="cb98-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb98-4" aria-hidden="true" tabindex="-1"></a><span class="fu">use_python</span>(<span class="st">&quot;../python&quot;</span>)</span>
+<span id="cb98-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb98-5" aria-hidden="true" tabindex="-1"></a><span class="co">#본인의 파이썬 경로를 넣어야만 합니다.</span></span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb99-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb99-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb99-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb99-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
+<span id="cb99-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb99-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span>
+<span id="cb99-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb99-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="불안정시계열모형" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> 불안정시계열모형<a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열모형" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>금융시계열분석에서 흔히 접하는 자료는 불안정시계열(nonstationary time series)이다. 예를 들어, 주가, 주당이익(earnings per share), 배당금, 환율, 국고채 이자율, 소비자물가지수 등등 가공하지 않은 대부분의 원계열들이 불안정 시계열에 속한다. 불안정시계열은 안정성 조건을 만족하지 않으며 일반적으로 결정적(deterministic) 또는 확률적 추세(stochastic trend)를 갖는다.</p>
+<p>추세가 있는 불안정시계열은 추세를 제거하고 움직임을 분석하는 경우가 많다. 따라서 추세를 제거하는 몇 가지 방법도 함께 살펴볼 것이다. 다음 그림은 불안정시계열의 대표적인 예로 삼성전자의 일별주가를 예시한 것이다.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb100-1" aria-hidden="true" tabindex="-1"></a>samsung <span class="op">=</span> yf.download(<span class="st">&quot;005930.KS&quot;</span>,start<span class="op">=</span><span class="st">&quot;2019-01-05&quot;</span>, end<span class="op">=</span><span class="st">&quot;2021-12-28&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+[*********************100%***********************]  1 of 1 completed</code></pre>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb102-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb102-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb102-2" aria-hidden="true" tabindex="-1"></a>samsung[<span class="st">&quot;Adj Close&quot;</span>].plot.line()</span>
+<span id="cb102-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb102-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-35-1.png" width="1440" /></p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb103-1" aria-hidden="true" tabindex="-1"></a>samsung</span></code></pre></div>
+<pre><code>##                Open     High      Low    Close     Adj Close    Volume
+## Date                                                                  
+## 2019-01-07  38000.0  38900.0  37800.0  38750.0  34936.316406  12748997
+## 2019-01-08  38000.0  39200.0  37950.0  38100.0  34350.289062  12756554
+## 2019-01-09  38650.0  39600.0  38300.0  39600.0  35702.664062  17452708
+## 2019-01-10  40000.0  40150.0  39600.0  39800.0  35882.980469  14731699
+## 2019-01-11  40350.0  40550.0  39950.0  40500.0  36514.078125  11661063
+## ...             ...      ...      ...      ...           ...       ...
+## 2021-12-21  77900.0  78300.0  77500.0  78100.0  76878.984375  14245298
+## 2021-12-22  78900.0  79400.0  78800.0  79400.0  78158.656250  17105892
+## 2021-12-23  79800.0  80000.0  79300.0  79900.0  78650.843750  13577498
+## 2021-12-24  80200.0  80800.0  80200.0  80500.0  79241.460938  12086380
+## 2021-12-27  80600.0  80600.0  79800.0  80200.0  78946.156250  10783368
+## 
+## [736 rows x 6 columns]</code></pre>
+<p>현대재무금융이론론에서는 주가를 예측함에 있어서 일정한 이론모형을 설정하고 애널리스트들의 주당이익 예측치나 무위험 이자율과정에 관한 정보를 추가로 활용하기도 한다. 순수하게 시계열분석 측면에서도 예측하고자 하는 주가 뿐만 아니라 국내외의 주요 경제금융변수들을 함께 고려한 모형을 이용하는 방법도 있다. 이처럼 factor model (요인모형)이나 벡터시계열을 이용한 예측은 후술하기로 하고 여기에서는 단일 시게열만을 고려한 불안정시계열모형의 에측기법을 살펴보기로 한다.</p>
+</div>
+<div id="확률보행모형" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> 확률보행모형<a href="불안정적-시계열모형의-추정과-예측.html#확률보행모형" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>불안정 확률과정의 가장 간단한 예로 AR(1)모형의 계수 <span class="math inline">\(\phi\)</span>가 1인 ‘확률보행모형’(Random Walk Model, 이하 RW)을 생각하여 보자. RW모형은 AR다항식의 근이 1, 즉 단위근을 갖는 경우이며 안정성조건을 만족하지 않는다.</p>
+<p>불안정 확률과정은 ‘적분과정’(integrated process)이라고도 하는데, RW과정에서 등호 오른쪽의 과거값을 반복 대입하여 다음과 같이 표현하면 그 이유를 알 수 있다.</p>
+<p><span class="math display">\[
+x_t = \mu + x_{t-1} + a_t = \mu + \Sigma^\infty_{j=0} a_{t-j}= \mu + a_t + \Sigma^\infty_{j=1} a_{t-j}, \quad a_t\sim (0,\sigma^2)
+\]</span></p>
+<p><span class="math inline">\(\mu\)</span>는 표류항(rate of drift)라고 부른다. 앞으로는 0으로 가정할 것이다. <span class="math inline">\(x_t\)</span>의 분산은 유한한 상수가 아니므로 안정성 조건을 위배하며 따라서 불안정 시계열이 된다. 또한 <span class="math inline">\((1-L)x_t = a_t\)</span>로 표현해보면 AR 다항식이 하나의 단위근을 가지므로 불안정적임을 확인할 수 있다. 현시점의 <span class="math inline">\(x_t\)</span>값은 현 시점을 포함하여 과거의 모든 잔차항들의 합계이므로 이는 마치 <span class="math inline">\(\{a_t\}\)</span>계열을 적분한 것과 같다. 따라서, <span class="math inline">\(x_t\)</span>를 적분과정이라고 부른다. 물론 <span class="math inline">\(x_t\)</span>를 한 번 차분하면, <span class="math inline">\(a_t\)</span>, 즉 안정적 과정이므로 <span class="math inline">\(x_t\)</span>를 ‘I(1)과정’,즉 한 번 차분하면 안정적 시계열이 되는 ’1차 적분과정’이라고 표현한다. 유사하게 백색잡음은 그 자체가 안정적 과정이므로 ’I(0)과정’이라고 표현한다.</p>
+<p>또 하나의 특징은 <span class="math inline">\(\partial x_t / \partial a_{t-j}, \ j=0,1,2,\cdots\)</span>의 크기가 모두 1로 같으며 특정 시점에서의 충격은 <span class="math inline">\(x_t\)</span>의 ’수준’에 항구적인 영향을 미친다는 것이다. AR(1)과 같은 안정적 시계열 모형서 충격이 시간의 경게에 따라 그 영향력이 지수적으로 감소하는 것과 대조를 이룬다.</p>
+<div id="예제-확률보행과정-sample-acf와-sample-pacf" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> 예제) 확률보행과정 Sample ACF와 Sample PACF<a href="불안정적-시계열모형의-추정과-예측.html#예제-확률보행과정-sample-acf와-sample-pacf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>다음은 확률보행과정의 시뮬레이션값과 표본 ACF, 표본 PACF이다.</p>
+<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.arima_process <span class="im">import</span> ArmaProcess</span>
+<span id="cb105-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf</span>
+<span id="cb105-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_pacf</span>
+<span id="cb105-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-5" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb105-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">3</span>,<span class="dv">1</span>, constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb105-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-8" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb105-9"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-9" aria-hidden="true" tabindex="-1"></a>rw <span class="op">=</span> ArmaProcess(np.array([<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>]), np.array([<span class="dv">1</span>])).generate_sample(nsample<span class="op">=</span><span class="dv">500</span>)</span>
+<span id="cb105-10"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-10" aria-hidden="true" tabindex="-1"></a>plt.plot(rw)</span>
+<span id="cb105-11"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-11" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Random walk without a drift&#39;</span>)</span>
+<span id="cb105-12"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-13"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-13" aria-hidden="true" tabindex="-1"></a><span class="co">#acf</span></span>
+<span id="cb105-14"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-14" aria-hidden="true" tabindex="-1"></a>plot_acf(rw, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>], title <span class="op">=</span><span class="st">&#39;RW ACF&#39;</span>)</span>
+<span id="cb105-15"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb105-16"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-16" aria-hidden="true" tabindex="-1"></a><span class="co">#pacf</span></span>
+<span id="cb105-17"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-17" aria-hidden="true" tabindex="-1"></a>plot_pacf(rw, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>],title <span class="op">=</span><span class="st">&#39;RW PACF&#39;</span> )</span>
+<span id="cb105-18"><a href="불안정적-시계열모형의-추정과-예측.html#cb105-18" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-36-3.png" width="672" /></p>
+</div>
+</div>
+<div id="integrated-moving-averageima모형" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Integrated Moving-Average(IMA)모형<a href="불안정적-시계열모형의-추정과-예측.html#integrated-moving-averageima모형" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>x_t가 단위근을 가지고 있으며 동시에 이동평균한을 가지고 있는 다음과 같은 불안정 시계열모형을 생각해 보자.</p>
+<p><span class="math display">\[
+(1-L)x_t = a_t - \theta a_{t-1}
+\]</span></p>
+<p>이 때 적분차수는 1인 반면 자기회구부분은 없으므로 <span class="math inline">\(x_t\)</span>를 IMA(1,1)과정이라고 한다.(ARIMA(0,1,1)) 이러한 모형은 불안정 시계열을 두 개의 부분, 즉 신호(signal)와 잡음으로 나누는 예제에서 흔히 볼 수 있다. 측정된 데이터 <span class="math inline">\(x_t\)</span>로부터 추세와 사이클부분으로 분해하는 문제를 보통 신호추출(signal extraction)이라고 부른다. <em>(이떄 추세와 사이클 부분의 공분산은 0을 가정한다.)</em></p>
+<p><span class="math display">\[
+x_t = \tau_t+c_t,\quad c_t \sim (0,\sigma^2_c) \\
+\tau_t = \tau_{t-1} + v_t, \quad v_t \sim (0,\sigma^2_v)
+\]</span></p>
+<p>에서 식을 다음과 같이 변형할 수 있을 것이다.</p>
+<p><span class="math display">\[
+(1-L)x_t = \Delta x_t = v_t + c_t - c_{t-1} = a_t - \theta a_{t-1}
+\]</span></p>
+<p>이때, <span class="math inline">\(x_t\)</span>의 분산 공분산을 고려하면 다음과 같다.</p>
+<p><span class="math display">\[
+Var(\Delta x_t) = \sigma^2_v + 2 \sigma^2_c \\
+Cov(\Delta x_t,\Delta x_{t-1}) = - \sigma^2_c
+\]</span></p>
+<p>따라서 1차 자기상관계수는 다음과 같다.</p>
+<p><span class="math display">\[
+-0.5 \le \rho_1 = \frac{- \sigma^2_c}{\sigma^2_v + 2 \sigma^2_c} \le 0
+\]</span></p>
+<p>그러므로 역으로 어떤 시계열의 차분과정이 래그 1에서 음의 자기상관을 보이는 경우 신호와 잡음의 합으로 모형설정 할 수 있음을 알 수 있다.</p>
+<div id="ima11과정의-sample-acf와-sample-pacf" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> IMA(1,1)과정의 Sample ACF와 Sample PACF<a href="불안정적-시계열모형의-추정과-예측.html#ima11과정의-sample-acf와-sample-pacf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.arima_process <span class="im">import</span> ArmaProcess</span>
+<span id="cb106-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_acf</span>
+<span id="cb106-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.graphics.tsaplots <span class="im">import</span> plot_pacf</span>
+<span id="cb106-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statsmodels.tsa.tsatools <span class="im">import</span> unintegrate, unintegrate_levels</span>
+<span id="cb106-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-5" aria-hidden="true" tabindex="-1"></a><span class="co"># r과는 달리 차분 역과정 함수 사용</span></span>
+<span id="cb106-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-7" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb106-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">5</span>,<span class="dv">1</span>, constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb106-9"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-9" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb106-10"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-10" aria-hidden="true" tabindex="-1"></a>ma1_1_ar_parm <span class="op">=</span> np.array([<span class="dv">1</span>])</span>
+<span id="cb106-11"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-11" aria-hidden="true" tabindex="-1"></a>ma1_1_ma_parm <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="op">-</span> <span class="fl">0.5</span>])</span>
+<span id="cb106-12"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-12" aria-hidden="true" tabindex="-1"></a>MA1_1 <span class="op">=</span> ArmaProcess(ma1_1_ar_parm, ma1_1_ma_parm).generate_sample(nsample<span class="op">=</span><span class="dv">501</span>)</span>
+<span id="cb106-13"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-14"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-15"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-15" aria-hidden="true" tabindex="-1"></a><span class="co">#ima11</span></span>
+<span id="cb106-16"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-16" aria-hidden="true" tabindex="-1"></a>ima_11 <span class="op">=</span> unintegrate(MA1_1, [<span class="dv">1</span>])  </span>
+<span id="cb106-17"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-17" aria-hidden="true" tabindex="-1"></a>plt.plot(ima_11)</span>
+<span id="cb106-18"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-19"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-19" aria-hidden="true" tabindex="-1"></a><span class="co">#acf</span></span>
+<span id="cb106-20"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-20" aria-hidden="true" tabindex="-1"></a>plot_acf(ima_11, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>], title <span class="op">=</span><span class="st">&#39;IMA(1,1) MA(1) = -0.5, ACF&#39;</span>)</span>
+<span id="cb106-21"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-22"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-22" aria-hidden="true" tabindex="-1"></a><span class="co">#pacf</span></span>
+<span id="cb106-23"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-23" aria-hidden="true" tabindex="-1"></a>plot_pacf(ima_11, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">2</span>],title <span class="op">=</span><span class="st">&#39;IMA(1,1) MA(1) = -0.5, PACF&#39;</span> )</span>
+<span id="cb106-24"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-25"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-26"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-26" aria-hidden="true" tabindex="-1"></a><span class="co">#diff</span></span>
+<span id="cb106-27"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-27" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">5</span>,<span class="dv">1</span>,<span class="dv">4</span>)</span>
+<span id="cb106-28"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-28" aria-hidden="true" tabindex="-1"></a>diffed_ima_11 <span class="op">=</span> np.diff(ima_11, <span class="dv">1</span>)</span>
+<span id="cb106-29"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-29" aria-hidden="true" tabindex="-1"></a>plt.plot(diffed_ima_11)</span>
+<span id="cb106-30"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-31"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-31" aria-hidden="true" tabindex="-1"></a><span class="co">#acf</span></span>
+<span id="cb106-32"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-32" aria-hidden="true" tabindex="-1"></a>plot_acf(diffed_ima_11, lags<span class="op">=</span><span class="dv">40</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">4</span>], title <span class="op">=</span><span class="st">&#39;first diffference of IMA(1,1) MA(1) = -0.5, ACF&#39;</span>)</span>
+<span id="cb106-33"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb106-34"><a href="불안정적-시계열모형의-추정과-예측.html#cb106-34" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-37-5.png" width="672" /></p>
+<p><a href="https://github.com/statsmodels/statsmodels/blob/6d4d588b00547296f678af2e8de8bf3bbea1102e/statsmodels/tsa/tsatools.py#L758">unintegrate 함수</a></p>
+</div>
+</div>
+<div id="arimapdq과정" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> ARIMA(p,d,q)과정<a href="불안정적-시계열모형의-추정과-예측.html#arimapdq과정" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>일반적인 ARIMA(p,d,q)은 다음과 같이 쓸 수 있다.</p>
+<p><span class="math display">\[
+\phi(L)(1-L)^d x_t = \theta(L)a_t \\
+or \\
+y&#39;_{t} = c + \phi_{1}y&#39;_{t-1} + \cdots + \phi_{p}y&#39;_{t-p}
+     + \theta_{1}\varepsilon_{t-1} + \cdots + \theta_{q}\varepsilon_{t-q} + \varepsilon_{t}
+\]</span></p>
+</div>
+<div id="베버리지-넬슨-분해" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> 베버리지-넬슨 분해<a href="불안정적-시계열모형의-추정과-예측.html#베버리지-넬슨-분해" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://www.uh.edu/~cmurray/courses/econ_7395/Beveridge%20Nelson.pdf">해당논문</a></p>
+<p>실증분석에서 다루는 경제 및 금융시계열들은 불안정 시계열인 경우가 많으며 이들을 직접 다루기보다는 이들로부터 불안정부분인 추세를 제거하고 남은 나머지인 안정적인 계열을 계산하여 분석하는 것이 보통이다. 이와 관련하여 많이 인용되는 추세제거방법 중 하나는 <strong>베버리지-넬슨 분해(Beveridge-Nelson decomposition; BN분해)</strong>이다. 이는 일차 차분 후 안정적인 시게열은 확률보행을 따르는 추세부분과 사이클부분으로 분해할 수 있음을 보였다. 이 때 안정적 과정인 사이클부분은 추세로 돌아가려는 예측가능한 모멘텀을 가질 수도 있으나 관측값이 추세부분에 근접함에 따라 사라지게 된다. BN 분해를 예시하기 위하여 다음과 같은 IMA(1,1) 과정을 두 개의 부분으로 분해하는 과정을 살펴보자.</p>
+<p><span class="math display">\[
+x_t = x_{t-1} + a_t - \theta a_{t-1} \\
+= x_{t-2}+(a_{t-1} - \theta a_{t-2}) + (a_{t} - \theta a_{t-1}) \\
+= \Sigma^t_{j=1} a_j - \theta \Sigma^{t-1}_{j=1} a_j \quad (\ x_0 = a_0 = 0 \ 이라고 \ 가정) \\
+= (1-\theta)(\Sigma^t_{j=1}a_j)+\theta a_t
+\]</span></p>
+<p>이때 <span class="math inline">\(\tau_t = (1-\theta)(\Sigma^t_{j=1}a_j)\)</span> 그리고 <span class="math inline">\(c_t = \theta a_t\)</span>라고 정의하면 다음과 같이 정리할 수 있다.</p>
+<p><span class="math display">\[
+x_t = \tau_t + c_t \\
+\tau_t = \tau_{t-1} + (1-\theta)a_t = \tau_{t-1}+v_t \\
+c_t = \theta a_t = \epsilon_t
+\]</span></p>
+<p>이때 두 부분의 확률오차항 <span class="math inline">\(v_t\)</span>와 <span class="math inline">\(\epsilon_t\)</span>는 모두 <span class="math inline">\(a_t\)</span>에 비례하며 따라서 완전상관관계에 있다.</p>
+<p>보다 일반적인 ARIMA(p,1,q) 과정을 따르는 <span class="math inline">\(x_t\)</span>를 <span class="math inline">\(\tau_t\)</span>와 <span class="math inline">\(c_t\)</span>로 분해하는 경우를 생각해 보자. AR과 MA 래그 다항식이 각각 안정ㅈ성 조건과 가역성 조건을 만족하는 경우 <span class="math inline">\(x_t\)</span>의 차분과정인 <span class="math inline">\(\Delta x_t\)</span>는 다음과 같이 월드 표현식으로 쓸 수 있다.</p>
+<p><span class="math display">\[
+\Delta x_t = \mu + \psi (L) a_t = \mu + \Sigma ^\infty_{j=0} \psi_j a_{t-j} = \mu + e_t
+\]</span></p>
+<p>단, <span class="math inline">\(\mu\)</span>는 <span class="math inline">\(\Delta x_t\)</span>의 결정적(비확률적) 부분으로서 후에 보는 것처럼 추세부분인 <span class="math inline">\(\tau_t\)</span>의 표류항이된다. 이를 변형하면 <span class="math inline">\(x_{t+k}\)</span>는 다음과 같은 식으로 표현할 수 있다.</p>
+<p><span class="math display">\[
+x_{t+k} = x_t + \mu \cdot k + \Sigma^k_{i=1} e_{t+i}
+\]</span></p>
+<p>이 때 <span class="math inline">\(e_t=(a_t + \psi_1 a_{t-1} \cdots)\)</span> 임을 상기하면</p>
+<p><span class="math display">\[
+\Sigma^k_{i=1} e_{t+i} = \Sigma^k_{i=1}a_{t+i} + \psi_1 \Sigma^k_{i=1}a_{t-1+i} + \psi_2 \Sigma^k_{i=1}a_{t-2+i} + \cdots
+\]</span></p>
+<p>이 성립하고, $E_t a_{t+i} = 0 $이므로 t-시점에서 <span class="math inline">\(x_{t+k}\)</span>에 대한 예측값은 다음과 같다.</p>
+<p><span class="math display">\[
+E_t x_{t+k} = \mu \cdot k + x_t + (\Sigma^k_{i=1} \psi_i)a_t + (\Sigma^{k+1}_{i=2} \psi_i)a_{t-1} + (\Sigma^{k+2}_{i=3} \psi_i)a_{t-2} + \cdots
+\]</span></p>
+<p>BN 분해에서 추세부분 <span class="math inline">\(\tau_t\)</span>는 k가 무한히 커질 때 예측값 <span class="math inline">\(E_t(x_{t+k}-\mu \cdot k)\)</span>가 점근하는 값으로 정의된다. 따라서 추세부분 <span class="math inline">\(\tau_t\)</span>는 다음과 같이 위의 식에서 오른쪽 항들 중 첫번째를 제외한 모든 항들의 합과 같다.</p>
+<p><span class="math display">\[
+x_t + (\Sigma^\infty_{i=1} \psi_i)a_t + (\Sigma^{\infty}_{i=2} \psi_i)a_{t-1} + (\Sigma^{\infty}_{i=3} \psi_i)a_{t-2} + \cdots
+\]</span></p>
+</div>
+<div id="hodric-prescott-필터" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Hodric-Prescott 필터<a href="불안정적-시계열모형의-추정과-예측.html#hodric-prescott-필터" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>불안정 시계열로부터 추세를 제거하는데 사용하는 또 다른 방법은 <strong>‘Hodric-Prescott 필터’</strong>가 있다. 관측치가 <span class="math inline">\(\{x_t\}^T_{t=1}\)</span>로 주어졌을 때 HP 필터 분해는 다음의 제곱합을 최소화하는 추세 <span class="math inline">\(\{\tau_t\}^T_{t=1}\)</span>를 구하는 것이다.</p>
+<p><span class="math display">\[
+S(\tau_t)=(1/T)\Sigma^T_{t=1}(x_t-\tau_t)^2 + (\lambda/T) \Sigma^{T-1}_{t=2}[(\tau_{t+1}-\tau_t)-(x_t-\tau_t)]^2
+\]</span></p>
+<p><span class="math inline">\(\lambda\)</span>는 임의의 상수로 추세항에 변동을 허용하는데 따른 ’비용’을 나타내는 항이다. <span class="math inline">\(\lambda\)</span>를 크게 할수록 추세는 스무드하게 되며 극단적으로 이를 무한대로 놓으면 <span class="math inline">\(\tau_t\)</span>는 선형추세에 접근한다. 즉, <span class="math inline">\(\lambda\)</span>를 아주 크게 놓으면 <span class="math inline">\((\Delta\tau_{t+1}-\Delta \tau_t)\)</span>가 매우 작게 되는 것이다. 반면 이를 0으로 두면 추세가 관측치와 동일하게 된다. 즉, <span class="math inline">\(x_t = \tau_t\)</span>이다. Hodric and Prescott(1984)는 연간, 분기별 그리고 월별 데이터의 경우 <span class="math inline">\(\lambda\)</span>를 각각 <strong>100, 1,600 그리고 14,400</strong>으로 둘 것을 제안하였다.</p>
+<p>식을 최소화하는 <span class="math inline">\(\{x_t\}^T_{t=1}\)</span>를 찾는 것을 수치최소화하는 방법으로 접근하는 것은 매우 어렵다. 왜냐하면 T-1개의 파라미터를 미지수로 놓고 이를 추정해야 하기 때문이다. 실무에서는 수치적인 방법이 아니라 대수적인 방법에 의하야 확률적 추세를 구한다. 즉, 목적함수의 극소화 조건을 직접 유도한 뒤 확률적 추세 <span class="math inline">\(\{x_t\}^T_{t=1}\)</span>를 닫힌 해의 형태로 구하고 형렬연산을 적용하여 계산하게 된다.</p>
+<div id="예제hp-필터-분해" class="section level3 hasAnchor" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> 예제)HP 필터 분해<a href="불안정적-시계열모형의-추정과-예측.html#예제hp-필터-분해" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>BN 분해와 HP 분해 또는 기타 다른 대안적 방법이 있다고 했을 때 어느 방법을 적용하는 것이 최선인가에 대하여는 아직 이론이 있으며 연구의 목적에 따라 적절한 선택을 할 필요가 있다. 다만, HP필터를 확률보행과정을 따르는 시계열에 적용하는 경우에도 <strong>(존재하지 않는)</strong> 사이클을 분리해내는 경우도 있으므로 이 방법을 사용할 때는 특히 유의하여야 한다.</p>
+<p>다음 예제는 1959년부터 2009년 3분기 까지 분기별 실질 GDP에 관한 분석이다.</p>
+<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-1" aria-hidden="true" tabindex="-1"></a>dta <span class="op">=</span> sm.datasets.macrodata.load_pandas().data</span>
+<span id="cb107-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-2" aria-hidden="true" tabindex="-1"></a>index <span class="op">=</span> pd.period_range(<span class="st">&#39;1959Q1&#39;</span>, <span class="st">&#39;2009Q3&#39;</span>, freq<span class="op">=</span><span class="st">&#39;Q&#39;</span>)</span>
+<span id="cb107-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-3" aria-hidden="true" tabindex="-1"></a>dta.set_index(index, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb107-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-4" aria-hidden="true" tabindex="-1"></a>cycle, trend <span class="op">=</span> sm.tsa.filters.hpfilter(dta.realgdp, <span class="dv">1600</span>) </span>
+<span id="cb107-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 분기별 데이터 이므로 1600 설정</span></span>
+<span id="cb107-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb107-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-7" aria-hidden="true" tabindex="-1"></a>gdp_decomp <span class="op">=</span> dta[[<span class="st">&#39;realgdp&#39;</span>]]</span>
+<span id="cb107-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb107-8" aria-hidden="true" tabindex="-1"></a>gdp_decomp[<span class="st">&quot;cycle&quot;</span>] <span class="op">=</span> cycle</span></code></pre></div>
+<pre><code>## &lt;string&gt;:1: SettingWithCopyWarning: 
+## A value is trying to be set on a copy of a slice from a DataFrame.
+## Try using .loc[row_indexer,col_indexer] = value instead
+## 
+## See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy</code></pre>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb109-1" aria-hidden="true" tabindex="-1"></a>gdp_decomp[<span class="st">&quot;trend&quot;</span>] <span class="op">=</span> trend</span></code></pre></div>
+<pre><code>## &lt;string&gt;:1: SettingWithCopyWarning: 
+## A value is trying to be set on a copy of a slice from a DataFrame.
+## Try using .loc[row_indexer,col_indexer] = value instead
+## 
+## See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy</code></pre>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb111-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb111-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb111-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb111-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb111-3" aria-hidden="true" tabindex="-1"></a>gdp_decomp[[<span class="st">&quot;realgdp&quot;</span>, <span class="st">&quot;trend&quot;</span>]][<span class="st">&quot;2000-03-31&quot;</span>:].plot(ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb111-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb111-4" aria-hidden="true" tabindex="-1"></a>gdp_decomp[[<span class="st">&quot;cycle&quot;</span>]][<span class="st">&quot;2000-03-31&quot;</span>:].plot(ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb111-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb111-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-38-7.png" width="672" /></p>
+<p>다음은 KOSPI의 월별 종가를 이용하여 HP 분해를 실행한 결과이다.</p>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb112-1" aria-hidden="true" tabindex="-1"></a>kospi <span class="op">=</span> yf.download(<span class="st">&quot;^KS11&quot;</span>,start<span class="op">=</span><span class="st">&quot;2000-01-04&quot;</span>, end<span class="op">=</span><span class="st">&quot;2021-12-31&quot;</span>)</span></code></pre></div>
+<pre><code>## 
+[*********************100%***********************]  1 of 1 completed</code></pre>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-1" aria-hidden="true" tabindex="-1"></a>kospi <span class="op">=</span> kospi.resample(<span class="st">&#39;M&#39;</span>).ffill()</span>
+<span id="cb114-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-2" aria-hidden="true" tabindex="-1"></a>cycle, trend <span class="op">=</span> sm.tsa.filters.hpfilter(kospi[<span class="st">&#39;Adj Close&#39;</span>], <span class="dv">14400</span>) </span>
+<span id="cb114-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 월별 데이터 이므로 14400 설정</span></span>
+<span id="cb114-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb114-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-5" aria-hidden="true" tabindex="-1"></a>kospi_decomp <span class="op">=</span> kospi[[<span class="st">&#39;Adj Close&#39;</span>]]</span>
+<span id="cb114-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb114-6" aria-hidden="true" tabindex="-1"></a>kospi_decomp[<span class="st">&quot;cycle&quot;</span>] <span class="op">=</span> cycle</span></code></pre></div>
+<pre><code>## &lt;string&gt;:1: SettingWithCopyWarning: 
+## A value is trying to be set on a copy of a slice from a DataFrame.
+## Try using .loc[row_indexer,col_indexer] = value instead
+## 
+## See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy</code></pre>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb116-1" aria-hidden="true" tabindex="-1"></a>kospi_decomp[<span class="st">&quot;trend&quot;</span>] <span class="op">=</span> trend</span></code></pre></div>
+<pre><code>## &lt;string&gt;:1: SettingWithCopyWarning: 
+## A value is trying to be set on a copy of a slice from a DataFrame.
+## Try using .loc[row_indexer,col_indexer] = value instead
+## 
+## See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy</code></pre>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb118-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb118-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb118-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>, constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb118-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb118-3" aria-hidden="true" tabindex="-1"></a>kospi_decomp[[<span class="st">&quot;Adj Close&quot;</span>, <span class="st">&quot;trend&quot;</span>]][<span class="st">&quot;2010-01-01&quot;</span>:].plot(ax<span class="op">=</span>ax[<span class="dv">0</span>])</span>
+<span id="cb118-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb118-4" aria-hidden="true" tabindex="-1"></a>kospi_decomp[[<span class="st">&quot;cycle&quot;</span>]][<span class="st">&quot;2010-01-01&quot;</span>:].plot(ax<span class="op">=</span>ax[<span class="dv">1</span>])</span>
+<span id="cb118-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb118-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-39-9.png" width="672" /></p>
+</div>
+</div>
+<div id="불안정시계열의-예측" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> 불안정시계열의 예측<a href="불안정적-시계열모형의-추정과-예측.html#불안정시계열의-예측" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="arimapdq모형의-mmse-예측" class="section level3 hasAnchor" number="3.8.1">
+<h3><span class="header-section-number">3.8.1</span> ARIMA(p,d,q)모형의 MMSE 예측<a href="불안정적-시계열모형의-추정과-예측.html#arimapdq모형의-mmse-예측" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>다음과 같이 일반적인 ARIMA(p,d,q)모형 <span class="math inline">\((d\ne0)\)</span>을 예측하는 방법을 생각해보자.</p>
+<p><span class="math display">\[
+\phi(L)(1-L)^d x_t = \theta(L)a_t
+\]</span></p>
+<p>수작업으로 계산할 일은 거의 없을 것이므로 결과만 보인다.</p>
+<p><span class="math display">\[
+x_{t+k} = \Sigma^\infty_{j=1} \pi_{k-j+1} + \Sigma^\infty_{i=0}\psi_i a_{t+k-i}
+\]</span></p>
+<p><span class="math inline">\(\pi^{(k)}_j = \Sigma^{k-1}_{i=0} \pi_{k-1+j-i}\psi_i\)</span> 따라서 <span class="math inline">\(E(a_{T+j}|x_t\le T)=0(j&gt;0)\)</span>임을 상기하면 k-단계 후 예측값은 다음과 같이 계산할 수 있다.</p>
+<p><span class="math display">\[
+\hat{x}_T(k)=E(x_{T+k}|x_T,x_{T-1},\cdots) = \Sigma^\infty_{j=1} \pi^{(k)}x_{T-j+1}
+\]</span></p>
+<p>이 때 예측오차는 다음과 같다.</p>
+<p><span class="math display">\[
+e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
+\]</span></p>
+<p>ARIMA(p,d,q)모형의 MMSE 예측오차는 안정적 과정, 즉 ARIMA(p,0,q)모형의 MMSE 예측오차와 동일한 모양을 가지고 있는 것을 유념하자.</p>
+</div>
+</div>
+<div id="python을을-이용한-예측-예제" class="section level2 hasAnchor" number="3.9">
+<h2><span class="header-section-number">3.9</span> Python을을 이용한 예측 예제<a href="불안정적-시계열모형의-추정과-예측.html#python을을-이용한-예측-예제" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>2011년 부터 2020년 까지의 삼성전자의 일별 종가를 ARIMA모형으로 설정하여 추정하고 에측해보자.</p>
+<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb119-1" aria-hidden="true" tabindex="-1"></a>wd <span class="op">=</span> yf.download(<span class="st">&quot;005930.KS&quot;</span>,start<span class="op">=</span><span class="st">&quot;2000-01-01&quot;</span>, end<span class="op">=</span><span class="st">&quot;2020-12-31&quot;</span>)</span>
+<span id="cb119-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="co">#wd = wd.resample(&quot;3M&quot;).ffill()</span></span></code></pre></div>
+<pre><code>## 
+[*********************100%***********************]  1 of 1 completed</code></pre>
+<p>그림은 일별 종가를 나타내고 있다.</p>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb121-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>,<span class="dv">1</span>,constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb121-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-4" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb121-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-5" aria-hidden="true" tabindex="-1"></a>plt.plot(wd[<span class="st">&quot;Adj Close&quot;</span>])</span>
+<span id="cb121-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;SAMSUNG Adj Close&#39;</span>)</span>
+<span id="cb121-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb121-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb121-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-41-11.png" width="672" /></p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-1" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb122-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-3" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">2</span>,<span class="dv">1</span>,constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb122-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-5" aria-hidden="true" tabindex="-1"></a><span class="co"># acf</span></span>
+<span id="cb122-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-6" aria-hidden="true" tabindex="-1"></a>plot_acf(wd[<span class="st">&quot;Adj Close&quot;</span>], lags<span class="op">=</span><span class="dv">10</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">0</span>], title <span class="op">=</span><span class="st">&#39;WD ACF&#39;</span>)</span>
+<span id="cb122-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb122-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-8" aria-hidden="true" tabindex="-1"></a><span class="co"># pacf</span></span>
+<span id="cb122-9"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-9" aria-hidden="true" tabindex="-1"></a>plot_pacf(wd[<span class="st">&quot;Adj Close&quot;</span>], lags<span class="op">=</span><span class="dv">10</span>, use_vlines<span class="op">=</span><span class="va">True</span>, zero <span class="op">=</span> <span class="va">False</span>, auto_ylims<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>ax[<span class="dv">1</span>],  title <span class="op">=</span><span class="st">&#39;WD PACF&#39;</span>)</span>
+<span id="cb122-10"><a href="불안정적-시계열모형의-추정과-예측.html#cb122-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-42-13.png" width="672" /></p>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb123-1" aria-hidden="true" tabindex="-1"></a>res_WD_arima110 <span class="op">=</span> sm.tsa.arima.ARIMA(wd[<span class="st">&quot;Adj Close&quot;</span>], order<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>), ).fit() </span></code></pre></div>
+<pre><code>## C:\Users\user\Desktop\FINTIM~1\python\lib\site-packages\statsmodels\tsa\base\tsa_model.py:471: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+##   self._init_dates(dates, freq)
+## C:\Users\user\Desktop\FINTIM~1\python\lib\site-packages\statsmodels\tsa\base\tsa_model.py:471: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+##   self._init_dates(dates, freq)
+## C:\Users\user\Desktop\FINTIM~1\python\lib\site-packages\statsmodels\tsa\base\tsa_model.py:471: ValueWarning: A date index has been provided, but it has no associated frequency information and so will be ignored when e.g. forecasting.
+##   self._init_dates(dates, freq)</code></pre>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(res_WD_arima110.summary())</span></code></pre></div>
+<pre><code>##                                SARIMAX Results                                
+## ==============================================================================
+## Dep. Variable:              Adj Close   No. Observations:                 5280
+## Model:                 ARIMA(1, 1, 0)   Log Likelihood              -39203.144
+## Date:                    월, 15 8 2022   AIC                          78410.288
+## Time:                        06:37:06   BIC                          78423.431
+## Sample:                             0   HQIC                         78414.881
+##                                - 5280                                         
+## Covariance Type:                  opg                                         
+## ==============================================================================
+##                  coef    std err          z      P&gt;|z|      [0.025      0.975]
+## ------------------------------------------------------------------------------
+## ar.L1          0.0363      0.006      5.855      0.000       0.024       0.048
+## sigma2      1.651e+05   1263.699    130.686      0.000    1.63e+05    1.68e+05
+## ===================================================================================
+## Ljung-Box (L1) (Q):                   0.01   Jarque-Bera (JB):             26340.48
+## Prob(Q):                              0.93   Prob(JB):                         0.00
+## Heteroskedasticity (H):              19.67   Skew:                             0.48
+## Prob(H) (two-sided):                  0.00   Kurtosis:                        13.90
+## ===================================================================================
+## 
+## Warnings:
+## [1] Covariance matrix calculated using the outer product of gradients (complex-step).</code></pre>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n\n\n</span><span class="st">&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;AR Roots : &quot;</span>, res_WD_arima110.arroots)</span></code></pre></div>
+<pre><code>## AR Roots :  [27.56175207]</code></pre>
+<div class="sourceCode" id="cb130"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;MA Roots : &quot;</span>, res_WD_arima110.maroots)</span></code></pre></div>
+<pre><code>## MA Roots :  []</code></pre>
+<div class="sourceCode" id="cb132"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Inverted AR Roots : &quot;</span>, res_WD_arima110.arroots<span class="op">**</span>(<span class="op">-</span><span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## Inverted AR Roots :  [0.03628216]</code></pre>
+<div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Inverted MA Roots : &quot;</span>, res_WD_arima110.maroots<span class="op">**</span>(<span class="op">-</span><span class="dv">1</span>))</span></code></pre></div>
+<pre><code>## Inverted MA Roots :  []</code></pre>
+<div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Mean Squared Error (MSE) : &quot;</span>, res_WD_arima110.mse)</span></code></pre></div>
+<pre><code>## Mean Squared Error (MSE) :  169167.64904263275</code></pre>
+<div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;=&quot;</span><span class="op">*</span><span class="dv">50</span>)</span></code></pre></div>
+<pre><code>## ==================================================</code></pre>
+<div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;box test on residuals : &quot;</span>)</span>
+<span id="cb140-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb140-2" aria-hidden="true" tabindex="-1"></a><span class="co">#res_WD_arima110.test_serial_correlation(&#39;ljungbox&#39;)</span></span></code></pre></div>
+<pre><code>## box test on residuals :</code></pre>
+<div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb142-1" aria-hidden="true" tabindex="-1"></a>sm.stats.diagnostic.acorr_ljungbox(res_WD_arima110.resid, lags<span class="op">=</span>[<span class="dv">5</span>])</span></code></pre></div>
+<pre><code>##      lb_stat  lb_pvalue
+## 5  13.517284   0.018985</code></pre>
+<p>예측을 진행하겠습니다.</p>
+<div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb144-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print(res_WD_arma11.forecast(10)) # 분산이 없음</span></span>
+<span id="cb144-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb144-2" aria-hidden="true" tabindex="-1"></a>forecast_10 <span class="op">=</span> res_WD_arima110.get_forecast(<span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## C:\Users\user\Desktop\FINTIM~1\python\lib\site-packages\statsmodels\tsa\base\tsa_model.py:834: ValueWarning: No supported index is available. Prediction results will be given with an integer index beginning at `start`.
+##   return get_prediction_index(</code></pre>
+<div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb146-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb146-1" aria-hidden="true" tabindex="-1"></a>forecast_10.predicted_mean <span class="co"># 예측 평균</span></span></code></pre></div>
+<pre><code>## 5280    78752.222465
+## 5281    78755.673941
+## 5282    78755.799168
+## 5283    78755.803711
+## 5284    78755.803876
+##             ...     
+## 5375    78755.803882
+## 5376    78755.803882
+## 5377    78755.803882
+## 5378    78755.803882
+## 5379    78755.803882
+## Name: predicted_mean, Length: 100, dtype: float64</code></pre>
+<div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb148-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb148-1" aria-hidden="true" tabindex="-1"></a>forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>) <span class="co">#알파값에 따른 신뢰구간간</span></span></code></pre></div>
+<pre><code>##       lower Adj Close  upper Adj Close
+## 5280     77955.725721     79548.719209
+## 5281     77608.640995     79902.706887
+## 5282     77342.047402     80169.550934
+## 5283     77118.193741     80393.413681
+## 5284     76921.453568     80590.154184
+## ...               ...              ...
+## 5375     70661.074671     86850.533094
+## 5376     70618.991501     86892.616264
+## 5377     70577.124866     86934.482899
+## 5378     70535.471457     86976.136308
+## 5379     70494.028050     87017.579715
+## 
+## [100 rows x 2 columns]</code></pre>
+<p>이를 그래프로 나타내겠습니다.</p>
+<div class="sourceCode" id="cb150"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb150-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb150-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-3"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-3" aria-hidden="true" tabindex="-1"></a>plt.cla()</span>
+<span id="cb150-4"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(constrained_layout<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb150-5"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-5" aria-hidden="true" tabindex="-1"></a>fig.set_size_inches(<span class="dv">15</span>, <span class="dv">15</span>)</span>
+<span id="cb150-6"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 신뢰구간</span></span>
+<span id="cb150-7"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-8"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-9"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-9" aria-hidden="true" tabindex="-1"></a>ax.fill_between(</span>
+<span id="cb150-10"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-10" aria-hidden="true" tabindex="-1"></a>forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>).index,</span>
+<span id="cb150-11"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-11" aria-hidden="true" tabindex="-1"></a>forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>)[<span class="st">&quot;upper Adj Close&quot;</span>]<span class="op">/</span><span class="dv">100</span>, <span class="co">#상한</span></span>
+<span id="cb150-12"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-12" aria-hidden="true" tabindex="-1"></a>forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>)[<span class="st">&quot;lower Adj Close&quot;</span>]<span class="op">/</span><span class="dv">100</span>, <span class="co">#하한 </span></span>
+<span id="cb150-13"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-13" aria-hidden="true" tabindex="-1"></a>facecolor<span class="op">=</span><span class="st">&#39;green&#39;</span>, </span>
+<span id="cb150-14"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-14" aria-hidden="true" tabindex="-1"></a>interpolate<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb150-15"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-15" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.3</span>) <span class="co"># 투명도</span></span>
+<span id="cb150-16"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-17"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 평균</span></span>
+<span id="cb150-18"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-18" aria-hidden="true" tabindex="-1"></a>ax.plot( forecast_10.predicted_mean<span class="op">/</span><span class="dv">100</span> , <span class="st">&#39;g&#39;</span>)</span>
+<span id="cb150-19"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-20"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-20" aria-hidden="true" tabindex="-1"></a><span class="co"># x축, y축 제목</span></span>
+<span id="cb150-21"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-21" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;date&#39;</span>, fontsize <span class="op">=</span> <span class="dv">10</span>)</span>
+<span id="cb150-22"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-22" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;WD&#39;</span>, fontsize <span class="op">=</span> <span class="dv">10</span>)</span>
+<span id="cb150-23"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-24"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-24" aria-hidden="true" tabindex="-1"></a><span class="co"># x축, y축 폰트 사이즈</span></span>
+<span id="cb150-25"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-25" aria-hidden="true" tabindex="-1"></a>ax.tick_params(axis <span class="op">=</span> <span class="st">&#39;x&#39;</span>, labelsize <span class="op">=</span> <span class="dv">1</span>)</span>
+<span id="cb150-26"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-26" aria-hidden="true" tabindex="-1"></a>ax.tick_params(axis <span class="op">=</span> <span class="st">&#39;y&#39;</span>, labelsize <span class="op">=</span> <span class="dv">5</span>)</span>
+<span id="cb150-27"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb150-28"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-28" aria-hidden="true" tabindex="-1"></a><span class="co"># 년도 데이터 전체 표출</span></span>
+<span id="cb150-29"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-29" aria-hidden="true" tabindex="-1"></a>ax.set_xticks(forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>).index)<span class="op">;</span></span>
+<span id="cb150-30"><a href="불안정적-시계열모형의-추정과-예측.html#cb150-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="main-files/figure-html/unnamed-chunk-45-15.png" width="1440" /></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="안정적-시계열모형의-추정과-예측.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/5_불안정적_시계열모형의_추정과_예측.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
