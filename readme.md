@@ -1,6 +1,6 @@
 https://mr21percent.github.io/python_Financial_Econometircs/
 
-**금융시계열분석(김명직 저)** 책을 python statsmodels 라이브러리를 활용하여 다시 공부중입니다.
+시계열 분석을 python statsmodels 라이브러리를 활용하여 다시 공부중입니다.
 
 book 올리는 법
 - index.Rmd 파일은 필수
