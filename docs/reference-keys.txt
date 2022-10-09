@@ -77,3 +77,13 @@ hodric-prescott-필터
 불안정시계열의-예측
 arimapdq모형의-mmse-예측
 python을을-이용한-예측-예제
+추세와-단위근
+시작에-앞서-python을-사용하기-위한-설정-2
+추세모형
+dickey-fuller-단위근-검정
+예제-kospi-주가지수의-adf-검정
+필립스-페론phillips-perron-단위근-검정
+예제-phillips-perron을-활용한-kospi-자료의-단위근-검정
+유사회귀분석
+단위근이-있는-시계열의-유사추세-및-사이클
+시간추세-안정적-시계열과-차분안정적-시계열의-선택문제

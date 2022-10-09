@@ -31,7 +31,7 @@
   
   
 <link rel="prev" href="안정적-시계열모형의-추정과-예측.html"/>
-
+<link rel="next" href="추세와-단위근.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -202,6 +202,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="3.9" data-path="불안정적-시계열모형의-추정과-예측.html"><a href="불안정적-시계열모형의-추정과-예측.html#python을을-이용한-예측-예제"><i class="fa fa-check"></i><b>3.9</b> Python을을 이용한 예측 예제</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="추세와-단위근.html"><a href="추세와-단위근.html"><i class="fa fa-check"></i><b>4</b> 추세와 단위근</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="추세와-단위근.html"><a href="추세와-단위근.html#시작에-앞서-python을-사용하기-위한-설정-2"><i class="fa fa-check"></i><b>4.1</b> 시작에 앞서 python을 사용하기 위한 설정</a></li>
+<li class="chapter" data-level="4.2" data-path="추세와-단위근.html"><a href="추세와-단위근.html#추세모형"><i class="fa fa-check"></i><b>4.2</b> 추세모형</a></li>
+<li class="chapter" data-level="4.3" data-path="추세와-단위근.html"><a href="추세와-단위근.html#dickey-fuller-단위근-검정"><i class="fa fa-check"></i><b>4.3</b> Dickey-Fuller 단위근 검정</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="추세와-단위근.html"><a href="추세와-단위근.html#예제-kospi-주가지수의-adf-검정"><i class="fa fa-check"></i><b>4.3.1</b> 예제) KOSPI 주가지수의 ADF-검정</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="추세와-단위근.html"><a href="추세와-단위근.html#필립스-페론phillips-perron-단위근-검정"><i class="fa fa-check"></i><b>4.4</b> 필립스-페론(Phillips-Perron) 단위근 검정</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="추세와-단위근.html"><a href="추세와-단위근.html#예제-phillips-perron을-활용한-kospi-자료의-단위근-검정"><i class="fa fa-check"></i><b>4.4.1</b> 예제) Phillips-Perron을 활용한 Kospi 자료의 단위근 검정</a></li>
+</ul></li>
+<li class="chapter" data-level="4.5" data-path="추세와-단위근.html"><a href="추세와-단위근.html#유사회귀분석"><i class="fa fa-check"></i><b>4.5</b> 유사회귀분석</a></li>
+<li class="chapter" data-level="4.6" data-path="추세와-단위근.html"><a href="추세와-단위근.html#단위근이-있는-시계열의-유사추세-및-사이클"><i class="fa fa-check"></i><b>4.6</b> 단위근이 있는 시계열의 유사추세 및 사이클</a></li>
+<li class="chapter" data-level="4.7" data-path="추세와-단위근.html"><a href="추세와-단위근.html#시간추세-안정적-시계열과-차분안정적-시계열의-선택문제"><i class="fa fa-check"></i><b>4.7</b> 시간추세 안정적 시계열과 차분안정적 시계열의 선택문제</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -253,10 +269,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>##                Open     High      Low    Close     Adj Close    Volume
 ## Date                                                                  
 ## 2019-01-07  38000.0  38900.0  37800.0  38750.0  34936.316406  12748997
-## 2019-01-08  38000.0  39200.0  37950.0  38100.0  34350.289062  12756554
-## 2019-01-09  38650.0  39600.0  38300.0  39600.0  35702.664062  17452708
-## 2019-01-10  40000.0  40150.0  39600.0  39800.0  35882.980469  14731699
-## 2019-01-11  40350.0  40550.0  39950.0  40500.0  36514.078125  11661063
+## 2019-01-08  38000.0  39200.0  37950.0  38100.0  34350.281250  12756554
+## 2019-01-09  38650.0  39600.0  38300.0  39600.0  35702.667969  17452708
+## 2019-01-10  40000.0  40150.0  39600.0  39800.0  35882.972656  14731699
+## 2019-01-11  40350.0  40550.0  39950.0  40500.0  36514.082031  11661063
 ## ...             ...      ...      ...      ...           ...       ...
 ## 2021-12-21  77900.0  78300.0  77500.0  78100.0  76878.984375  14245298
 ## 2021-12-22  78900.0  79400.0  78800.0  79400.0  78158.656250  17105892
@@ -541,10 +557,10 @@ e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
 <pre><code>##                                SARIMAX Results                                
 ## ==============================================================================
 ## Dep. Variable:              Adj Close   No. Observations:                 5280
-## Model:                 ARIMA(1, 1, 0)   Log Likelihood              -39203.144
-## Date:                    월, 15 8 2022   AIC                          78410.288
-## Time:                        06:37:06   BIC                          78423.431
-## Sample:                             0   HQIC                         78414.881
+## Model:                 ARIMA(1, 1, 0)   Log Likelihood              -39203.142
+## Date:                   일, 09 10 2022   AIC                          78410.283
+## Time:                        20:11:07   BIC                          78423.426
+## Sample:                             0   HQIC                         78414.877
 ##                                - 5280                                         
 ## Covariance Type:                  opg                                         
 ## ==============================================================================
@@ -553,7 +569,7 @@ e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
 ## ar.L1          0.0363      0.006      5.855      0.000       0.024       0.048
 ## sigma2      1.651e+05   1263.699    130.686      0.000    1.63e+05    1.68e+05
 ## ===================================================================================
-## Ljung-Box (L1) (Q):                   0.01   Jarque-Bera (JB):             26340.48
+## Ljung-Box (L1) (Q):                   0.01   Jarque-Bera (JB):             26340.34
 ## Prob(Q):                              0.93   Prob(JB):                         0.00
 ## Heteroskedasticity (H):              19.67   Skew:                             0.48
 ## Prob(H) (two-sided):                  0.00   Kurtosis:                        13.90
@@ -563,15 +579,15 @@ e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
 ## [1] Covariance matrix calculated using the outer product of gradients (complex-step).</code></pre>
 <div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb127-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n\n\n</span><span class="st">&quot;</span>)</span></code></pre></div>
 <div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb128-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;AR Roots : &quot;</span>, res_WD_arima110.arroots)</span></code></pre></div>
-<pre><code>## AR Roots :  [27.56175207]</code></pre>
+<pre><code>## AR Roots :  [27.56137516]</code></pre>
 <div class="sourceCode" id="cb130"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb130-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb130-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;MA Roots : &quot;</span>, res_WD_arima110.maroots)</span></code></pre></div>
 <pre><code>## MA Roots :  []</code></pre>
 <div class="sourceCode" id="cb132"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb132-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb132-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Inverted AR Roots : &quot;</span>, res_WD_arima110.arroots<span class="op">**</span>(<span class="op">-</span><span class="dv">1</span>))</span></code></pre></div>
-<pre><code>## Inverted AR Roots :  [0.03628216]</code></pre>
+<pre><code>## Inverted AR Roots :  [0.03628266]</code></pre>
 <div class="sourceCode" id="cb134"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb134-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb134-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Inverted MA Roots : &quot;</span>, res_WD_arima110.maroots<span class="op">**</span>(<span class="op">-</span><span class="dv">1</span>))</span></code></pre></div>
 <pre><code>## Inverted MA Roots :  []</code></pre>
 <div class="sourceCode" id="cb136"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb136-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb136-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Mean Squared Error (MSE) : &quot;</span>, res_WD_arima110.mse)</span></code></pre></div>
-<pre><code>## Mean Squared Error (MSE) :  169167.64904263275</code></pre>
+<pre><code>## Mean Squared Error (MSE) :  169167.51874499713</code></pre>
 <div class="sourceCode" id="cb138"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb138-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb138-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;=&quot;</span><span class="op">*</span><span class="dv">50</span>)</span></code></pre></div>
 <pre><code>## ==================================================</code></pre>
 <div class="sourceCode" id="cb140"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb140-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb140-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;box test on residuals : &quot;</span>)</span>
@@ -579,38 +595,38 @@ e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
 <pre><code>## box test on residuals :</code></pre>
 <div class="sourceCode" id="cb142"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb142-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb142-1" aria-hidden="true" tabindex="-1"></a>sm.stats.diagnostic.acorr_ljungbox(res_WD_arima110.resid, lags<span class="op">=</span>[<span class="dv">5</span>])</span></code></pre></div>
 <pre><code>##      lb_stat  lb_pvalue
-## 5  13.517284   0.018985</code></pre>
+## 5  13.517299   0.018985</code></pre>
 <p>예측을 진행하겠습니다.</p>
 <div class="sourceCode" id="cb144"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb144-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="co">#print(res_WD_arma11.forecast(10)) # 분산이 없음</span></span>
 <span id="cb144-2"><a href="불안정적-시계열모형의-추정과-예측.html#cb144-2" aria-hidden="true" tabindex="-1"></a>forecast_10 <span class="op">=</span> res_WD_arima110.get_forecast(<span class="dv">100</span>)</span></code></pre></div>
 <pre><code>## C:\Users\user\Desktop\FINTIM~1\python\lib\site-packages\statsmodels\tsa\base\tsa_model.py:834: ValueWarning: No supported index is available. Prediction results will be given with an integer index beginning at `start`.
 ##   return get_prediction_index(</code></pre>
 <div class="sourceCode" id="cb146"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb146-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb146-1" aria-hidden="true" tabindex="-1"></a>forecast_10.predicted_mean <span class="co"># 예측 평균</span></span></code></pre></div>
-<pre><code>## 5280    78752.222465
-## 5281    78755.673941
-## 5282    78755.799168
-## 5283    78755.803711
-## 5284    78755.803876
+<pre><code>## 5280    78752.215670
+## 5281    78755.667230
+## 5282    78755.792462
+## 5283    78755.797005
+## 5284    78755.797170
 ##             ...     
-## 5375    78755.803882
-## 5376    78755.803882
-## 5377    78755.803882
-## 5378    78755.803882
-## 5379    78755.803882
+## 5375    78755.797176
+## 5376    78755.797176
+## 5377    78755.797176
+## 5378    78755.797176
+## 5379    78755.797176
 ## Name: predicted_mean, Length: 100, dtype: float64</code></pre>
 <div class="sourceCode" id="cb148"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb148-1"><a href="불안정적-시계열모형의-추정과-예측.html#cb148-1" aria-hidden="true" tabindex="-1"></a>forecast_10.conf_int(alpha<span class="op">=</span><span class="fl">0.05</span>) <span class="co">#알파값에 따른 신뢰구간간</span></span></code></pre></div>
 <pre><code>##       lower Adj Close  upper Adj Close
-## 5280     77955.725721     79548.719209
-## 5281     77608.640995     79902.706887
-## 5282     77342.047402     80169.550934
-## 5283     77118.193741     80393.413681
-## 5284     76921.453568     80590.154184
+## 5280     77955.719249     79548.712091
+## 5281     77608.634465     79902.699995
+## 5282     77342.040790     80169.544133
+## 5283     77118.187072     80393.406939
+## 5284     76921.446854     80590.147487
 ## ...               ...              ...
-## 5375     70661.074671     86850.533094
-## 5376     70618.991501     86892.616264
-## 5377     70577.124866     86934.482899
-## 5378     70535.471457     86976.136308
-## 5379     70494.028050     87017.579715
+## 5375     70661.067122     86850.527230
+## 5376     70618.983948     86892.610405
+## 5377     70577.117308     86934.477045
+## 5378     70535.463894     86976.130459
+## 5379     70494.020482     87017.573871
 ## 
 ## [100 rows x 2 columns]</code></pre>
 <p>이를 그래프로 나타내겠습니다.</p>
@@ -653,8 +669,8 @@ e_T(k)=x_{T+k}-\hat{x}_T(k) = \Sigma^{k-1}_{j=0}\psi_j a_{T+k-j}
           </div>
         </div>
       </div>
-<a href="안정적-시계열모형의-추정과-예측.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="안정적-시계열모형의-추정과-예측.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="추세와-단위근.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
